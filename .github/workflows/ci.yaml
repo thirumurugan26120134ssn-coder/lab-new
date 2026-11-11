@@ -6,8 +6,14 @@ on:
       - main
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      # Step 1: print in  the repository
+      # Step 1: Check out the repository code
       - name: Checkout repository
-      - exec: echo "hi this is a working of workflow operation sample "
-  
+        uses: actions/checkout@v4
+
+      # Step 2: Print message in the workflow log
+      - name: Print welcome message
+        run: echo "hi this is a working of workflow operation sample"
