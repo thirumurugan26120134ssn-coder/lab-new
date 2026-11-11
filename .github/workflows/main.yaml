@@ -1,0 +1,20 @@
+name: Linux workflow automation CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Print message in the workflow log
+      - name: Print welcome message
+        run: echo "hi this is a working of workflow operation sample"
