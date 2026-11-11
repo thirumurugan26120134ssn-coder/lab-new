@@ -1,0 +1,16 @@
+name: Linux workflow automation CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Step 1: print in  the repository
+      - name: Checkout repository
+      - exec: "echo hi this is a working of workflow operation sample "
+  
